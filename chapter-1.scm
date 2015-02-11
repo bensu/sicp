@@ -39,4 +39,7 @@
   (let ((coins '(1 5 10 25 50)))
     (nth coins (- kinds-of-coins 1))))
 
-(count-change 100)
+(define (gdc a b)
+  (if (= b 0)
+      a
+      (gdc b (remainder a b))))
